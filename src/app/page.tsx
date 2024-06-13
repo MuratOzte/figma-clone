@@ -1,3 +1,9 @@
+import Live from '@/components/Live';
+
 export default function Page() {
-    return <div>LiveBlocks Figma Clone</div>;
+    return (
+        <div>
+            <Live />
+        </div>
+    );
 }
