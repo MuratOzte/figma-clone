@@ -106,10 +106,6 @@ const Live = () => {
                 setCursorState({
                     mode: CursorMode.Hidden,
                 });
-            } else if (event.key === 'e') {
-                setCursorState({
-                    mode: CursorMode.ReactionSelector,
-                });
             }
         };
         const onKeyDown = (event: KeyboardEvent) => {
