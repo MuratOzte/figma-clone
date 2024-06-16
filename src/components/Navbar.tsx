@@ -19,9 +19,8 @@ const Navbar = ({
             value.some((val) => val?.value === activeElement?.value));
 
     return (
-        <nav className="w-full flex justify-between ml-10">
-            <Image src={Logo} alt="FigPro Logo" width={30} height={20} />
-
+        <nav className="w-full flex justify-between ml-10 h-16 items-center select-none">
+            <Image src={Logo} alt="FigPro Logo" width={30} height={20} className='cursor-pointer' />
             <ActiveUsers />
         </nav>
     );

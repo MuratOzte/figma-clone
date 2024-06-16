@@ -8,7 +8,11 @@ import ReactionSelector from './reaction/ReactionButton';
 import FlyingReaction from './reaction/FlyingReaction';
 import useInterval from '@/hooks/useInterval';
 
-const Live = () => {
+interface LiveProps {
+    canvasRef: React.MutableRefObject<HTMLCanvasElement | null>;
+}
+
+const Live: React.FC<LiveProps> = ({ canvasRef }) => {
     const others = useOthers();
     const [{ cursor }, updateMyPresence] = useMyPresence() as any;
 
@@ -124,12 +128,15 @@ const Live = () => {
 
     return (
         <div
+            id='canvas'
             onPointerMove={handlePointerMove}
             onPointerLeave={handlePointerLeave}
             onPointerDown={handlePointerDown}
             onPointerUp={handlePointerUp}
-            className="w-full h-full bg-green-500 border-2 border-black"
+            className="w-full h-full bg-green-100 border-2 border-black"
         >
+            <canvas ref={canvasRef} />
+
             {reaction.map((r) => (
                 <FlyingReaction
                     key={r.timestamp.toString()}
