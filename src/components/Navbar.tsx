@@ -5,6 +5,7 @@ import { memo } from 'react';
 
 import { ActiveElement, NavbarProps } from '@/types/type';
 import ActiveUsers from './avatar/ActiveUsers';
+import Logo from '@/assets/logo.svg';
 
 const Navbar = ({
     activeElement,
@@ -18,13 +19,8 @@ const Navbar = ({
             value.some((val) => val?.value === activeElement?.value));
 
     return (
-        <nav className="flex select-none items-center justify-between gap-4 bg-primary-black px-5 text-white">
-            <Image
-                src="/assets/logo.svg"
-                alt="FigPro Logo"
-                width={58}
-                height={20}
-            />
+        <nav className="w-full flex justify-between ml-10">
+            <Image src={Logo} alt="FigPro Logo" width={30} height={20} />
 
             <ActiveUsers />
         </nav>

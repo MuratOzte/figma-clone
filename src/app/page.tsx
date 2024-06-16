@@ -3,9 +3,9 @@ import Navbar from '@/components/Navbar';
 
 export default function Page() {
     return (
-        <div className="w-full h-screen">
+        <main className="w-full h-screen overflow-hidden">
             <Navbar  />
             <Live />
-        </div>
+        </main>
     );
 }

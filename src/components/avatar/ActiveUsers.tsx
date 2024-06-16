@@ -13,7 +13,7 @@ const ActiveUsers = () => {
     console.log(currentUser);
 
     return (
-        <main className="flex h-screen w-full select-none place-content-center place-items-center">
+        <main className="flex justify-between ml-32 mr-20">
             <div className="flex pl-3">
                 {currentUser && (
                     <div className="relative ml-8 first:ml-0">
