@@ -1,8 +1,8 @@
 'use client';
 import Live from '@/components/Live';
 import Navbar from '@/components/Navbar';
-import LeftSideBar from '@/components/sidebar/LeftSideBar';
-import RightSideBar from '@/components/sidebar/RightSideBar';
+import LeftSideBar from '@/components/LeftSidebar';
+import RightSideBar from '@/components/RightSidebar';
 import {
     handleCanvasMouseDown,
     handleResize,
